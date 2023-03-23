@@ -1,0 +1,3 @@
+[webservers]
+webserver01  ansible_user=centos ansible_host=192.168.2.101 keepalived_state=MASTER keepalived_priority=101
+webserver02  ansible_user=centos ansible_host=192.168.2.102 keepalived_state=BACKUP keepalived_priority=100

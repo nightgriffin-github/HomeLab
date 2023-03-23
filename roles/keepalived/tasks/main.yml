@@ -1,0 +1,11 @@
+---
+- name: Install keepalived
+  dnf:
+    name: "keepalived"
+    state: latest
+
+- name: Configure keepalived with the right settings
+  template:
+    src: keepalived.j2
+    dest: /etc/keepalived/keepalived.conf
+  notify: restart keepalived
